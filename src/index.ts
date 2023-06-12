@@ -25,6 +25,13 @@ app.get("/", (req: Request, res: Response) => {
   res.status(200).json({ message: "Sample Route Test" });
 });
 
+
+app.get("/health", (req: Request, res: Response) => {
+  res.status(200).json({ message: "The server is healthy!" });
+});
+
+
+
 // Run server
 app.listen(PORT, () => {
   console.log(`Server started succesfully on localhost:${PORT} 🚀`);
